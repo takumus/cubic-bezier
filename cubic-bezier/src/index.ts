@@ -1,4 +1,3 @@
-type XT = {x: number, t: number};
 export = function CubicBezier(
     p1x: number,
     p1y: number,
