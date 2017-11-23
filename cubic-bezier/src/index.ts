@@ -1,4 +1,4 @@
-export = function CubicBezier(
+export default function CubicBezier(
     p1x: number,
     p1y: number,
     p2x: number,
