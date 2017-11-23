@@ -12,6 +12,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "declaration-bundler-webpack-plugin": "^1.0.3",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-webpack": "^1.5.0",

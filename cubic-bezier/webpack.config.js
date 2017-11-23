@@ -2,7 +2,7 @@ var path = require('path');
 var WebpacModuleExports = require("./webpack-add-module-exports");
 module.exports = {
     entry: {
-        app :'./src/index.ts'
+        app :'./index.ts'
     },
     output: {
         filename: 'index.js',

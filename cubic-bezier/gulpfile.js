@@ -4,9 +4,9 @@ var webpack = require('gulp-webpack');;
 var webpackConfig = require('./webpack.config.js');
  
 gulp.task('webpack', function () {
-    gulp.src(['./src/*.ts'])
+    gulp.src(['./*.ts'])
     .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest('./src'));
+    .pipe(gulp.dest('./'));
 });
  
 gulp.task('connect', function() {
@@ -16,7 +16,7 @@ gulp.task('connect', function() {
 });
  
 gulp.task('watch', function () {
-    gulp.watch('./src/**/*.ts', ['webpack']);
+    gulp.watch('./**/*.ts', ['webpack']);
 });
  
 gulp.task('default', ['webpack','watch','connect']);
