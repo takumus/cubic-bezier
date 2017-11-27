@@ -1,22 +1,19 @@
 var gulp = require('gulp');
-var connect = require('gulp-connect');
-var webpack = require('gulp-webpack');;
-var webpackConfig = require('./webpack.config.js');
- 
-gulp.task('webpack', function () {
-    gulp.src(['./src/*.ts'])
-    .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest('./'));
+var ts = require('gulp-typescript');
+var tsProject = ts.createProject('./tsconfig.json');
+var merge2 = require('merge2');
+gulp.task('tsc', function () {
+    var tsc = gulp.src('./src/**/*.ts')
+    .pipe(ts({
+        declaration: true
+    }));
+    return merge2([
+        tsc.dts.pipe(gulp.dest('./dest/')),
+        tsc.js.pipe(gulp.dest('./dest/'))
+    ]);
 });
- 
-gulp.task('connect', function() {
-    connect.server({
-        root: [__dirname]
-    });
-});
- 
 gulp.task('watch', function () {
-    gulp.watch('./src/**/*.ts', ['webpack']);
+    gulp.watch('./src/**/*.ts', ['tsc']);
 });
  
-gulp.task('default', ['webpack','watch','connect']);
+gulp.task('default', ['tsc', 'watch']);

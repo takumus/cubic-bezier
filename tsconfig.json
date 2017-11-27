@@ -2,8 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "declaration": true,
-    "declarationDir": "./dest"
+    "declaration": true
   },
   "exclude": [
     "node_modules"
