@@ -1,6 +1,7 @@
 var path = require('path');
 var WebpacModuleExports = require("webpack-add-module-exports");
 var DtsBundlerPlugin = require('dtsbundler-webpack-plugin');
+var DtsPlugin = require('dts-webpack-plugin');
 module.exports = {
     entry: {
         app :'./src/index.ts'
@@ -20,9 +21,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new DtsBundlerPlugin({
-            out:'./dest/index.d.ts',
-        }),
         new WebpacModuleExports()
     ]
 }
