@@ -12,8 +12,8 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
-    "declaration-bundler-webpack-plugin": "git://github.com/noherczeg/dtsbundler-webpack-plugin.git",
     "dtsbundler-webpack-plugin": "git+https://github.com/noherczeg/dtsbundler-webpack-plugin.git",
+    "webpack-add-module-exports": "git+https://github.com/takumus/webpack-add-module-exports.git",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-webpack": "^1.5.0",

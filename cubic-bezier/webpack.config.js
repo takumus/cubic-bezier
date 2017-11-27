@@ -1,5 +1,5 @@
 var path = require('path');
-var WebpacModuleExports = require("./webpack-add-module-exports");
+var WebpacModuleExports = require("webpack-add-module-exports");
 var DtsBundlerPlugin = require('dtsbundler-webpack-plugin');
 module.exports = {
     entry: {
