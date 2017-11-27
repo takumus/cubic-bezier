@@ -1,11 +1,12 @@
 var path = require('path');
 var WebpacModuleExports = require("./webpack-add-module-exports");
+var DtsBundlerPlugin = require('dtsbundler-webpack-plugin');
 module.exports = {
     entry: {
-        app :'./index.ts'
+        app :'./src/index.ts'
     },
     output: {
-        filename: 'index.js',
+        filename: './dest/index.js',
         library: 'CubicBezier',
         libraryTarget: "umd"
     },
@@ -19,6 +20,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new DtsBundlerPlugin({
+            out:'./dest/index.d.ts',
+        }),
         new WebpacModuleExports()
     ]
 }
