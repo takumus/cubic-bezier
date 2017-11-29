@@ -1,6 +1,6 @@
 {
   "name": "cubic-bezier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dest/js/index.js",
   "scripts": {
