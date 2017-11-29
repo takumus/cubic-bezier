@@ -1,5 +1,6 @@
 # CubicBezier
-
+## github
+<https://github.com/takumus/CubicBezier>
 ## これは何
 ３次ベジェを作れるモジュールです。  
 ## インストール
