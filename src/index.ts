@@ -1,3 +1,4 @@
+import search from './search';
 export default function CubicBezier(
     p1x: number,
     p1y: number,
@@ -28,21 +29,6 @@ export default function CubicBezier(
             1, p1y, p2y, 0
         );
     }
-}
-//2分探索もどきで探索
-function search(arr: number[], len: number, n: number) {
-    if (n == 0) return 0;
-    let l = 0;
-    let r = len - 1;
-    while(l <= r) {
-        const m = ~~((l + r) * 0.5);
-        if (arr[m] < n) {
-            l = m + 1;
-        }else {
-            r = m - 1;
-        }
-    }
-    return r;
 }
 // maximaで求めたらこうなったベジェ関数。
 function bezier(t: number, p0: number, p1: number, p2: number, p3: number) {

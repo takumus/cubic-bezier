@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var search_1 = require("./search");
 function CubicBezier(p1x, p1y, p2x, p2y, res) {
     if (res === void 0) { res = 50; }
     var xList = [];
@@ -13,7 +14,7 @@ function CubicBezier(p1x, p1y, p2x, p2y, res) {
     }
     return function (x) {
         x = x < 0 ? 0 : x > 1 ? 1 : x;
-        var i = search(xList, res, x);
+        var i = search_1.default(xList, res, x);
         var ax = xList[i];
         var bx = xList[i + 1];
         var at = tList[i];
@@ -26,23 +27,9 @@ function CubicBezier(p1x, p1y, p2x, p2y, res) {
     };
 }
 exports.default = CubicBezier;
-//2分探索もどきで探索
-function search(arr, len, n) {
-    if (n == 0)
-        return 0;
-    var l = 0;
-    var r = len - 1;
-    while (l <= r) {
-        var m = ~~((l + r) * 0.5);
-        if (arr[m] < n) {
-            l = m + 1;
-        }
-        else {
-            r = m - 1;
-        }
-    }
-    return r;
-}
+module.exports = CubicBezier;
+module.exports.default = CubicBezier
+
 // maximaで求めたらこうなったベジェ関数。
 function bezier(t, p0, p1, p2, p3) {
     var mt = 1 - t;

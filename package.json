@@ -2,20 +2,21 @@
   "name": "cubic-bezier",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.ts",
+  "main": "./dest/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "vinyl-source-stream": "^1.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-add-module-exports": "git+https://github.com/takumus/gulp-add-module-exports.git",
     "gulp-typescript": "^3.2.3",
     "merge2": "^1.2.0",
+    "through2": "^2.0.3",
     "ts-loader": "^3.1.1",
-    "typescript": "^2.6.1"
+    "typescript": "^2.6.1",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
