@@ -5,8 +5,8 @@ var config = {
         src: './src/**/*.ts'
     },
     dest: {
-        js: './dest/js',
-        dts: './dest/d.ts'
+        js: './js',
+        dts: './d.ts'
     }
 }
 var gulp = require('gulp');

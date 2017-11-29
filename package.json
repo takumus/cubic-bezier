@@ -1,8 +1,8 @@
 {
   "name": "cubic-bezier",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "",
-  "main": "./dest/js/index.js",
+  "main": "./js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
