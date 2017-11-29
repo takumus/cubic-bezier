@@ -1,7 +1,6 @@
 
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "@types/cubic-bezier",
-    "private": true,
     "types:": "./index.d.ts"
 }
