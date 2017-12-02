@@ -26,10 +26,7 @@ function CubicBezier(p1x, p1y, p2x, p2y, res) {
         1, p1y, p2y, 0);
     };
 }
-exports.default = CubicBezier;
-module.exports = CubicBezier;
-module.exports.default = CubicBezier
-
+module.exports = CubicBezier; module.exports.default = CubicBezier; exports.default = CubicBezier
 // maximaで求めたらこうなったベジェ関数。
 function bezier(t, p0, p1, p2, p3) {
     var mt = 1 - t;

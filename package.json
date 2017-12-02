@@ -1,6 +1,6 @@
 {
   "name": "cubic-bezier",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "",
   "main": "./js/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-add-module-exports": "^1.0.1",
+    "gulp-add-module-exports": "^1.0.3",
     "gulp-typescript": "^3.2.3",
     "merge2": "^1.2.0",
     "through2": "^2.0.3",

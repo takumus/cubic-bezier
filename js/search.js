@@ -17,4 +17,4 @@ function search(arr, len, n) {
     }
     return r;
 }
-exports.default = search;
+module.exports = search; module.exports.default = search; exports.default = search
