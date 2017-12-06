@@ -1,4 +1,5 @@
-(function() {
+import CubicBezier from 'cubic-bezier';
+function init() {
     var bezierList = [
         {
             title: "Linear",
@@ -72,7 +73,6 @@
         this.remove = function(svg) {
             _this.elem.removeChild(svg.elem);
         }
-        return this;
     }
     // define SVG sizes
     var width = 300;
@@ -133,4 +133,5 @@
         document.body.appendChild(bezierName);
         document.body.appendChild(canvas.elem);
     });
-})();
+};
+window.addEventListener('load', init);
