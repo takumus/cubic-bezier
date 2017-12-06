@@ -1,0 +1,21 @@
+{
+  "name": "samples-tween",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-connect": "*",
+    "gulp-webpack": "*",
+    "ts-loader": "*",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@types/cubic-bezier": "^1.0.5",
+    "@types/pixi.js": "*",
+    "cubic-bezier": "^1.0.11"
+  }
+}

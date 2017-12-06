@@ -1,4 +1,5 @@
-(function() {
+import CubicBezier from 'cubic-bezier';
+function init() {
     var tweenList = [
         {
             title: "Linear",
@@ -105,4 +106,5 @@
         });
     }
     loop();
-})();
+}
+window.addEventListener('load', init);
