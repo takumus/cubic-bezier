@@ -1,6 +1,6 @@
 import CubicBezier from 'cubic-bezier';
 function init() {
-    var bezierList = [
+    const bezierList = [
         {
             title: "Linear",
             points: [0, 0, 1, 1]
@@ -56,8 +56,8 @@ function init() {
     ];
     // Simple SVG Tag Helper
     function SVG(tag) {
-        var NS = "http://www.w3.org/2000/svg";
-        var _this = this;
+        const NS = "http://www.w3.org/2000/svg";
+        const _this = this;
         this.elem = document.createElementNS(NS, tag);
         this.attr = function (name, value) {
             _this.elem.setAttributeNS(null, name, value);
@@ -75,15 +75,15 @@ function init() {
         }
     }
     // define SVG sizes
-    var width = 300;
-    var height = 150;
-    var tbMargin = 20;
+    const width = 300;
+    const height = 150;
+    const tbMargin = 20;
     // create
     bezierList.forEach(function (bezier) {
         // create SVGs
-        var canvas = new SVG("svg");
-        var line = new SVG("polyline");
-        var background = new SVG("rect");
+        const canvas = new SVG("svg");
+        const line = new SVG("polyline");
+        const background = new SVG("rect");
         canvas.attrs([
             ["width", width],
             ["height", height + tbMargin * 2]
@@ -103,7 +103,7 @@ function init() {
         canvas.add(background);
         canvas.add(line);
         // create bezier function
-        var bezierFunction = CubicBezier(
+        const bezierFunction = CubicBezier(
             bezier.points[0],
             bezier.points[1],
             bezier.points[2],
@@ -111,11 +111,11 @@ function init() {
             50
         );
         // create polygon's points from bezier function
-        var polygon = [];
-        var res = 500;
-        for (var i = 0; i <= res; i ++) {
-            var x = i / res;
-            var y = 1 - bezierFunction(x);
+        const polygon = [];
+        const res = 500;
+        for (let i = 0; i <= res; i ++) {
+            const x = i / res;
+            const y = 1 - bezierFunction(x);
             polygon.push(
                 x * width,
                 y * height + tbMargin
@@ -124,8 +124,8 @@ function init() {
         // set points
         line.attr("points", polygon.join(" "));
         // create DOMs
-        var title = document.createElement("h3");
-        var bezierName = document.createElement("h4");
+        const title = document.createElement("h3");
+        const bezierName = document.createElement("h4");
         title.innerHTML = bezier.title;
         bezierName.innerHTML = "CubicBezier(" + bezier.points.join(", ") + ")";
         // append to body
