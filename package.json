@@ -1,5 +1,5 @@
 {
-  "name": "cubic-bezier",
+  "name": "@takumus/cubic-bezier",
   "version": "1.0.0",
   "description": "",
   "scripts": {
