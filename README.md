@@ -14,3 +14,10 @@ const easeInOutQuad = CubicBezier(0.455, 0.03, 0.515, 0.955);
 console.log(liner(0), liner(1));
 console.log(easeInOutQuad(0), easeInOutQuad(1));
 ```
+# Examples
+## Animation
+demo: <https://takumus.github.io/cubic-bezier/examples/animation/www>  
+source: <https://github.com/takumus/cubic-bezier/tree/master/examples/animation>
+## Graph
+demo: <https://takumus.github.io/cubic-bezier/examples/graph/www  
+source: <https://github.com/takumus/cubic-bezier/tree/master/examples/graph>
