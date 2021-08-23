@@ -88,7 +88,7 @@
 
 /***/ "../../dist/index.esm.js":
 /*!**********************************************************************!*\
-  !*** C:/Users/Takumu Hayashi/MyWorks/cubic-bezier/dist/index.esm.js ***!
+  !*** C:/Users/takumus/MyWorks/cubic-bezier/dist/index.esm.js ***!
   \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
