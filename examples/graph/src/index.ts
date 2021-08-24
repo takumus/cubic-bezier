@@ -109,6 +109,8 @@ function init() {
             bezier.points[1],
             bezier.points[2],
             bezier.points[3],
+            0,
+            1,
             50
         );
         // create polygon's points from bezier function

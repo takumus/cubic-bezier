@@ -1,18 +1,20 @@
 import search from './search';
 export default function CubicBezier(
-    p1x: number,
-    p1y: number,
-    p2x: number,
-    p2y: number,
+    cp1x: number,
+    cp1y: number,
+    cp2x: number,
+    cp2y: number,
+    p1y: number = 0,
+    p2y: number = 1,
     res: number = 50
 ){
     const xList: number[] = [];
     const tList: number[] = [];
-    p1y = 1 - p1y;
-    p2y = 1 - p2y;
+    cp1y = cp1y;
+    cp2y = cp2y;
     for (let i = 0; i <= res; i ++) {
         const t = i / res;
-        xList.push(bezier(t, 0, p1x, p2x, 1));
+        xList.push(bezier(t, 0, cp1x, cp2x, 1));
         tList.push(t);
     }
     return function (x: number): number {
@@ -22,11 +24,11 @@ export default function CubicBezier(
         const bx = xList[i + 1];
         const at = tList[i];
         const bt = tList[i + 1];
-        return 1 - bezier(
+        return bezier(
             //tを計算
             (x - ax) / (bx - ax) * (bt - at) + at,
             //yを求める
-            1, p1y, p2y, 0
+            p1y, cp1y, cp2y, p2y
         );
     }
 }
